@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     @State var loginSelected: String = ""
+    @State private var isLoading: Bool = false
     
     var body: some View {
         NavigationStack{
@@ -23,16 +24,11 @@ struct HomePageView: View {
                 .edgesIgnoringSafeArea(.all)
                 VStack (spacing: 100){
                     Image("Logo")
-                    VStack(spacing: 10) {
-                        LoginEntryView(loginSelected: $loginSelected)
-                        Button (action: {}) {
-                            Label("SEARCH", systemImage: "magnifyingglass")
-                                .labelStyle(.buttonIcon)
-                        }
-                        .buttonStyle(.borderedProminent)
-                        .tint(Color("MainBlue"))
-                        .padding(.bottom, 60)
-                        .padding(.horizontal, 40)
+                    if (!isLoading) {
+                        SearchLoginView(loginSelected: $loginSelected, isLoading: $isLoading)
+                    }
+                    else {
+                        LoadingView()
                     }
                 }
             }

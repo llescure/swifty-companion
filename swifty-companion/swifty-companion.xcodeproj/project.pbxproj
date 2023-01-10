@@ -12,6 +12,8 @@
 		DBB6505A296D60550078375B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB65059296D60550078375B /* Assets.xcassets */; };
 		DBB6505D296D60550078375B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB6505C296D60550078375B /* Preview Assets.xcassets */; };
 		DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD699C296DA6EA0046D5F9 /* StyledTextField.swift */; };
+		DBCD699F296DCC2D0046D5F9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD699E296DCC2D0046D5F9 /* LoadingView.swift */; };
+		DBCD69A2296DCD420046D5F9 /* SearchLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD69A1296DCD420046D5F9 /* SearchLoginView.swift */; };
 		DBE8AE1B296D9DBF00DAFBE1 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE8AE1A296D9DBF00DAFBE1 /* ButtonIcon.swift */; };
 		DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +25,8 @@
 		DBB65059296D60550078375B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB6505C296D60550078375B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBCD699C296DA6EA0046D5F9 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		DBCD699E296DCC2D0046D5F9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		DBCD69A1296DCD420046D5F9 /* SearchLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoginView.swift; sourceTree = "<group>"; };
 		DBE8AE1A296D9DBF00DAFBE1 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
 		DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +67,6 @@
 				DBB65063296D60730078375B /* Views */,
 				DBB65055296D60530078375B /* swifty_companionApp.swift */,
 				DBB65057296D60530078375B /* HomePageView.swift */,
-				DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */,
 				DBB65059296D60550078375B /* Assets.xcassets */,
 				DBB6505B296D60550078375B /* Preview Content */,
 			);
@@ -81,6 +84,7 @@
 		DBB65063296D60730078375B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBCD69A0296DCC360046D5F9 /* Subviews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +110,16 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DBCD69A0296DCC360046D5F9 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD699E296DCC2D0046D5F9 /* LoadingView.swift */,
+				DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */,
+				DBCD69A1296DCD420046D5F9 /* SearchLoginView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +195,10 @@
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
 				DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */,
 				DBB65056296D60530078375B /* swifty_companionApp.swift in Sources */,
+				DBCD69A2296DCD420046D5F9 /* SearchLoginView.swift in Sources */,
 				DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */,
 				DBE8AE1B296D9DBF00DAFBE1 /* ButtonIcon.swift in Sources */,
+				DBCD699F296DCC2D0046D5F9 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
