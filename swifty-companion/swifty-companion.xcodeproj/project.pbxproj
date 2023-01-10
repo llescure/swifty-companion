@@ -11,6 +11,9 @@
 		DBB65058296D60530078375B /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65057296D60530078375B /* HomePageView.swift */; };
 		DBB6505A296D60550078375B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB65059296D60550078375B /* Assets.xcassets */; };
 		DBB6505D296D60550078375B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB6505C296D60550078375B /* Preview Assets.xcassets */; };
+		DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD699C296DA6EA0046D5F9 /* StyledTextField.swift */; };
+		DBE8AE1B296D9DBF00DAFBE1 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE8AE1A296D9DBF00DAFBE1 /* ButtonIcon.swift */; };
+		DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		DBB65057296D60530078375B /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		DBB65059296D60550078375B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB6505C296D60550078375B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBCD699C296DA6EA0046D5F9 /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		DBE8AE1A296D9DBF00DAFBE1 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
+		DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +57,13 @@
 		DBB65054296D60530078375B /* swifty-companion */ = {
 			isa = PBXGroup;
 			children = (
+				DBB65066296D622F0078375B /* Models */,
+				DBB65065296D621C0078375B /* Style */,
+				DBB65064296D62140078375B /* Services */,
 				DBB65063296D60730078375B /* Views */,
 				DBB65055296D60530078375B /* swifty_companionApp.swift */,
 				DBB65057296D60530078375B /* HomePageView.swift */,
+				DBE8AE1C296DA10B00DAFBE1 /* LoginEntryView.swift */,
 				DBB65059296D60550078375B /* Assets.xcassets */,
 				DBB6505B296D60550078375B /* Preview Content */,
 			);
@@ -73,6 +83,29 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DBB65064296D62140078375B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DBB65065296D621C0078375B /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				DBE8AE1A296D9DBF00DAFBE1 /* ButtonIcon.swift */,
+				DBCD699C296DA6EA0046D5F9 /* StyledTextField.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		DBB65066296D622F0078375B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
+				DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */,
 				DBB65056296D60530078375B /* swifty_companionApp.swift in Sources */,
+				DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */,
+				DBE8AE1B296D9DBF00DAFBE1 /* ButtonIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
