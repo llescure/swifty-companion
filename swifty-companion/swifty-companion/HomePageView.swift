@@ -24,6 +24,7 @@ struct HomePageView: View {
                 .edgesIgnoringSafeArea(.all)
                 VStack (spacing: 100){
                     Image("Logo")
+                        .frame(height: 100)
                     if (!isLoading) {
                         SearchLoginView(loginSelected: $loginSelected, isLoading: $isLoading)
                     }

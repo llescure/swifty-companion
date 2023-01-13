@@ -15,7 +15,9 @@ struct SearchLoginView: View {
         VStack(spacing: 10) {
             LoginEntryView(loginSelected: $loginSelected)
             Button (action: {
-                isLoading = true
+//                if (!loginSelected.isEmpty) {
+                    isLoading = true
+//                }
             }) {
                 Label("SEARCH", systemImage: "magnifyingglass")
                     .labelStyle(.buttonIcon)
@@ -24,8 +26,8 @@ struct SearchLoginView: View {
             .tint(Color("MainBlue"))
             .padding(.bottom, 60)
             .padding(.horizontal, 40)
-            .frame(height: 120)
         }
+        .frame(height: 120)
     }
     
     struct SearchLoginView_Previews: PreviewProvider {

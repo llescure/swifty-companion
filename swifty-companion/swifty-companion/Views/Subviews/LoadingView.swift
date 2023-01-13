@@ -13,6 +13,7 @@ struct LoadingView: View {
             .progressViewStyle(CircularProgressViewStyle(tint: Color("MainBlue")))
             .scaleEffect(6)
             .frame(height: 120)
+            .padding(.top, 5)
     }
 }
 

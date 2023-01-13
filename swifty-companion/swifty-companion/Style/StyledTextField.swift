@@ -11,7 +11,7 @@ extension View {
     func styledTextfield() -> some View {
         self
             .overlay(Rectangle().frame(height: 2).padding(.top, 35))
-            .foregroundColor(Color("lightgray"))
+            .foregroundColor(Color("LightGray"))
             .disableAutocorrection(true)
     }
 }
