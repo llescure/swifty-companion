@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @StateObject var initAPI: InitAPIModel = InitAPIModel()
+    @StateObject var token: TokenAPIModel = TokenAPIModel()
     @State var loginSelected: String = ""
     @State private var isLoading: Bool = false
     
@@ -26,7 +26,7 @@ struct HomePageView: View {
                 VStack (spacing: 100){
                     Image("Logo")
                         .frame(height: 100)
-                    if (!isLoading) {
+                    if (!isLoading && token.isGenerated) {
                         SearchLoginView(loginSelected: $loginSelected, isLoading: $isLoading)
                     }
                     else {
@@ -36,7 +36,7 @@ struct HomePageView: View {
             }
         }
         .task{
-            await initAPI.fetchParisCampusUsers()
+            await token.fetchData()
         }
     }
 }

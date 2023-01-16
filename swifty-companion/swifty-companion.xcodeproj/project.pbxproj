@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */; };
+		DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */; };
 		DBB60A3C29718BC70093BAA9 /* 42API-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */; };
-		DBB60A4229719B430093BAA9 /* InitAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4129719B430093BAA9 /* InitAPIModel.swift */; };
+		DBB60A4229719B430093BAA9 /* TokenAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4129719B430093BAA9 /* TokenAPIModel.swift */; };
 		DBB60A4429719EA20093BAA9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4329719EA20093BAA9 /* Token.swift */; };
 		DBB65056296D60530078375B /* swifty_companionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65055296D60530078375B /* swifty_companionApp.swift */; };
 		DBB65058296D60530078375B /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB65057296D60530078375B /* HomePageView.swift */; };
@@ -22,8 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
+		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "42API-Info.plist"; sourceTree = "<group>"; };
-		DBB60A4129719B430093BAA9 /* InitAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitAPIModel.swift; sourceTree = "<group>"; };
+		DBB60A4129719B430093BAA9 /* TokenAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPIModel.swift; sourceTree = "<group>"; };
 		DBB60A4329719EA20093BAA9 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		DBB60A452971A71B0093BAA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBB65052296D60530078375B /* swifty-companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +121,9 @@
 		DBB65066296D622F0078375B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DBB60A4129719B430093BAA9 /* InitAPIModel.swift */,
+				DBB60A4129719B430093BAA9 /* TokenAPIModel.swift */,
+				DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */,
+				DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */,
 				DBB60A4329719EA20093BAA9 /* Token.swift */,
 			);
 			path = Models;
@@ -205,14 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
+				DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */,
 				DBB60A4429719EA20093BAA9 /* Token.swift in Sources */,
 				DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */,
 				DBB65056296D60530078375B /* swifty_companionApp.swift in Sources */,
 				DBCD69A2296DCD420046D5F9 /* SearchLoginView.swift in Sources */,
-				DBB60A4229719B430093BAA9 /* InitAPIModel.swift in Sources */,
+				DBB60A4229719B430093BAA9 /* TokenAPIModel.swift in Sources */,
 				DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */,
 				DBE8AE1B296D9DBF00DAFBE1 /* ButtonIcon.swift in Sources */,
 				DBCD699F296DCC2D0046D5F9 /* LoadingView.swift in Sources */,
+				DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
