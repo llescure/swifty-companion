@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @StateObject var initAPI: InitAPIModel = InitAPIModel()
     @State var loginSelected: String = ""
     @State private var isLoading: Bool = false
     
@@ -33,6 +34,9 @@ struct HomePageView: View {
                     }
                 }
             }
+        }
+        .task{
+            await initAPI.fetchParisCampusUsers()
         }
     }
 }

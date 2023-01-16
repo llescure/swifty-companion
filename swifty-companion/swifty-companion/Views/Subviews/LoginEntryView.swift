@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginEntryView: View {
     @Binding var loginSelected: String
+    
     var body: some View {
         VStack (alignment: .leading, spacing: 0) {
             Text("Login")
