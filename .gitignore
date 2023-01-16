@@ -90,6 +90,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 # Plist with 42 API UID and Secret
-42API-Info.plist
+swifty-companion/42API-Info.plist
 
 .DS_Store
