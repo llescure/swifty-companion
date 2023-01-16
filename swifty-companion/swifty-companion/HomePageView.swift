@@ -27,7 +27,7 @@ struct HomePageView: View {
                     Image("Logo")
                         .frame(height: 100)
                     if (!isLoading && token.isGenerated) {
-                        SearchLoginView(loginSelected: $loginSelected, isLoading: $isLoading)
+                        SearchLoginView(loginSelected: $loginSelected, isLoading: $isLoading, token: token.value!.access_token)
                     }
                     else {
                         LoadingView()

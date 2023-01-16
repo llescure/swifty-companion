@@ -9,4 +9,9 @@ import Foundation
 
 struct CampusUsers: Codable {
     var login: String
+    var image: Image42
+}
+
+struct Image42: Codable {
+    var link: String
 }

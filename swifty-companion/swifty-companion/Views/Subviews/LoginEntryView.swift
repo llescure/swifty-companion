@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LoginEntryView: View {
     @Binding var loginSelected: String
+    @State var isShowingLoginAutocomplete: Bool = false
+    var token: String
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0) {
@@ -17,6 +19,7 @@ struct LoginEntryView: View {
                 .foregroundColor(Color("LightGray"))
             TextField("", text: $loginSelected)
                 .disabled(true)
+                .textInputAutocapitalization(.never)
                 .styledTextfield()
         }
         .padding(.bottom, 20)
@@ -25,11 +28,11 @@ struct LoginEntryView: View {
         .background(RoundedRectangle(cornerRadius: 10).foregroundColor(.white))
         .padding(.horizontal, 40)
         .accessibilityLabel("Enter 42 login")
-    }
-}
-
-struct LoginEntryView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginEntryView(loginSelected: .constant(""))
+        .onTapGesture {
+            isShowingLoginAutocomplete = true
+        }
+        .sheet(isPresented: $isShowingLoginAutocomplete){
+            LoginAutocompleteView(loginSelected: $loginSelected, token: token)
+        }
     }
 }

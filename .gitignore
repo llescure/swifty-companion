@@ -91,3 +91,5 @@ iOSInjectionProject/
 
 # Plist with 42 API UID and Secret
 42API-Info.plist
+
+.DS_Store

@@ -10,10 +10,11 @@ import SwiftUI
 struct SearchLoginView: View {
     @Binding var loginSelected: String
     @Binding var isLoading: Bool
+    var token: String
     
     var body: some View {
         VStack(spacing: 10) {
-            LoginEntryView(loginSelected: $loginSelected)
+            LoginEntryView(loginSelected: $loginSelected, token: token)
             Button (action: {
 //                if (!loginSelected.isEmpty) {
                     isLoading = true
@@ -28,11 +29,5 @@ struct SearchLoginView: View {
             .padding(.horizontal, 40)
         }
         .frame(height: 120)
-    }
-    
-    struct SearchLoginView_Previews: PreviewProvider {
-        static var previews: some View {
-            SearchLoginView(loginSelected: .constant(""), isLoading: .constant(false))
-        }
     }
 }
