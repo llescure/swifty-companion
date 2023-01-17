@@ -14,7 +14,7 @@ struct UserResultView: View {
     var body: some View {
         ZStack(alignment:.center) {
             GeometryReader {geo in
-                Image("Background")
+                Image(type.background)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: geo.size.width)
@@ -36,5 +36,20 @@ struct UserResultView: View {
             return ""
         }
         return login
+    }
+    
+    var type: CoalitionType {
+        switch user.coalition?.name {
+        case "The Assembly":
+            return CoalitionType.ParisCoalition[3]
+        case "The Alliance":
+            return CoalitionType.ParisCoalition[1]
+        case "The Order":
+            return CoalitionType.ParisCoalition[2]
+        case "The Federation":
+            return CoalitionType.ParisCoalition[0]
+        default:
+            return CoalitionType.ParisCoalition[4]
+        }
     }
 }

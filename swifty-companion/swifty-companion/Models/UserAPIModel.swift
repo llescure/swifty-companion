@@ -53,8 +53,14 @@ class UserAPIModel: ObservableObject {
         let (data, _) = try await URLSession.shared.data(for: request)
         let decoder = JSONDecoder()
         let currentUserCoalition = try decoder.decode([Coalition].self, from: data)
-        // The first coalition is the cursus one, the second is the piscine one
-        return currentUserCoalition[0]
+        let currentUserCoalitionSize = currentUserCoalition.count - 1
+        // The cursus coalition in Paris have an id comprised between 45 and 48
+        for i in 0...currentUserCoalitionSize {
+            if (currentUserCoalition[i].id >= 45 && currentUserCoalition[i].id <= 48) {
+                return currentUserCoalition[i]
+            }
+        }
+        return nil
     }
     
     @MainActor
