@@ -8,12 +8,12 @@
 import Foundation
 
 class ParisCampusUsersAPIModel: ObservableObject {
-    @Published var value: [String]?
+    @Published var value: [CampusUsers]?
     @Published var isLoaded: Bool = false
     
     /* This function generates a list of all login on 42 Paris campus */
     
-    func generateListOf42ParisCampusUsers(token: String, login: String) async throws -> [String]? {
+    func generateListOf42ParisCampusUsers(token: String, login: String) async throws -> [CampusUsers]? {
         let url = URL(string: "https://api.intra.42.fr/v2/campus/1/users")
         guard let requestUrl = url else {
             print("Error: URL is empty")
@@ -30,15 +30,10 @@ class ParisCampusUsersAPIModel: ObservableObject {
         print(response)
         print(data)
         let decoder = JSONDecoder()
-        var list: [String] = []
         let currentCampusUsers = try decoder.decode([CampusUsers].self, from: data)
-        let campusUsersSize = currentCampusUsers.count - 1
+        print(currentCampusUsers)
         
-        for i in 0...campusUsersSize {
-            list.append(currentCampusUsers[i].login)
-        }
-        print(list)
-        return list
+        return currentCampusUsers
     }
     
     @MainActor

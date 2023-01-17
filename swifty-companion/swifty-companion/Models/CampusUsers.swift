@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct CampusUsers: Codable {
+struct CampusUsers: Codable, Identifiable {
+    var id: Int
     var login: String
     var image: Image42
 }
 
 struct Image42: Codable {
-    var link: String
+    var link: String?
 }

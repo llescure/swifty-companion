@@ -17,12 +17,32 @@ struct LoginAutocompleteView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(searchResults, id: \.self) { name in
-                    Text(name)
-                        .onTapGesture {
-                            loginSelected = name
-                            dismiss()
+                ForEach(searchResults) { user in
+                    HStack {
+                        if (user.image.link != nil) {
+                            AsyncImage(
+                                url: URL(string: user.image.link!),
+                                content: { image in
+                                    image.resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(maxWidth: 50, maxHeight: 50)
+                                },
+                                placeholder: {
+                                    ProgressView()
+                                }
+                            )
                         }
+                        else {
+                            Image("Incognito")
+                                .resizable()
+                                .frame(maxWidth: 50, maxHeight: 50)
+                        }
+                        Text(user.login)
+                            .onTapGesture {
+                                loginSelected = user.login
+                                dismiss()
+                            }
+                    }
                 }
             }
         }
@@ -36,7 +56,7 @@ struct LoginAutocompleteView: View {
         }
     }
     
-    var searchResults: [String] {
+    var searchResults: [CampusUsers] {
         if (users.isLoaded) {
             return users.value!
         }
