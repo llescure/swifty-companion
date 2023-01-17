@@ -14,8 +14,11 @@ class ParisCampusUsersAPIModel: ObservableObject {
     /* This function generates a list of all login on 42 Paris campus */
     
     func generateListOf42ParisCampusUsers(token: String, login: String) async throws -> [CampusUsers]? {
-        let url = URL(string: "https://api.intra.42.fr/v2/campus/1/users")
-        guard let requestUrl = url else {
+        let baseURL = "https://api.intra.42.fr/v2/campus/1/users"
+        let queryComponents = login.lowercased() + "," + login.lowercased() + "z"
+        let finalURL = URL(string: baseURL + "?range[login]=" + queryComponents)
+        
+        guard let requestUrl = finalURL else {
             print("Error: URL is empty")
             return nil
         }
