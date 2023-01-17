@@ -10,6 +10,10 @@
 		DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */; };
 		DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */; };
 		DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */; };
+		DB393FDC2976E3EE00E0B36C /* UserAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDB2976E3EE00E0B36C /* UserAPIModel.swift */; };
+		DB393FDE2976E3F500E0B36C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDD2976E3F500E0B36C /* User.swift */; };
+		DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDF2976F0C300E0B36C /* Coalition.swift */; };
+		DB393FE42976F46D00E0B36C /* UserResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FE32976F46D00E0B36C /* UserResultView.swift */; };
 		DBB60A3C29718BC70093BAA9 /* 42API-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */; };
 		DBB60A4229719B430093BAA9 /* TokenAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4129719B430093BAA9 /* TokenAPIModel.swift */; };
 		DBB60A4429719EA20093BAA9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4329719EA20093BAA9 /* Token.swift */; };
@@ -28,6 +32,10 @@
 		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
 		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAutocompleteView.swift; sourceTree = "<group>"; };
+		DB393FDB2976E3EE00E0B36C /* UserAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIModel.swift; sourceTree = "<group>"; };
+		DB393FDD2976E3F500E0B36C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DB393FDF2976F0C300E0B36C /* Coalition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coalition.swift; sourceTree = "<group>"; };
+		DB393FE32976F46D00E0B36C /* UserResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultView.swift; sourceTree = "<group>"; };
 		DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "42API-Info.plist"; sourceTree = "<group>"; };
 		DBB60A4129719B430093BAA9 /* TokenAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPIModel.swift; sourceTree = "<group>"; };
 		DBB60A4329719EA20093BAA9 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 				DBB65057296D60530078375B /* HomePageView.swift */,
 				DBB65059296D60550078375B /* Assets.xcassets */,
 				DBB6505B296D60550078375B /* Preview Content */,
+				DB393FE32976F46D00E0B36C /* UserResultView.swift */,
 			);
 			path = "swifty-companion";
 			sourceTree = "<group>";
@@ -127,6 +136,9 @@
 				DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */,
 				DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */,
 				DBB60A4329719EA20093BAA9 /* Token.swift */,
+				DB393FDB2976E3EE00E0B36C /* UserAPIModel.swift */,
+				DB393FDD2976E3F500E0B36C /* User.swift */,
+				DB393FDF2976F0C300E0B36C /* Coalition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,15 +225,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */,
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
 				DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */,
 				DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */,
 				DBB60A4429719EA20093BAA9 /* Token.swift in Sources */,
 				DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */,
 				DBB65056296D60530078375B /* swifty_companionApp.swift in Sources */,
+				DB393FDE2976E3F500E0B36C /* User.swift in Sources */,
 				DBCD69A2296DCD420046D5F9 /* SearchLoginView.swift in Sources */,
+				DB393FDC2976E3EE00E0B36C /* UserAPIModel.swift in Sources */,
 				DBB60A4229719B430093BAA9 /* TokenAPIModel.swift in Sources */,
 				DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */,
+				DB393FE42976F46D00E0B36C /* UserResultView.swift in Sources */,
 				DBE8AE1B296D9DBF00DAFBE1 /* ButtonIcon.swift in Sources */,
 				DBCD699F296DCC2D0046D5F9 /* LoadingView.swift in Sources */,
 				DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */,

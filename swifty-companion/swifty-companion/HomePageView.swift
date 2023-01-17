@@ -10,7 +10,6 @@ import SwiftUI
 struct HomePageView: View {
     @StateObject var token: TokenAPIModel = TokenAPIModel()
     @State var loginSelected: String = ""
-    @State private var isLoading: Bool = false
     
     var body: some View {
         NavigationStack{
@@ -26,8 +25,8 @@ struct HomePageView: View {
                 VStack (spacing: 100){
                     Image("Logo")
                         .frame(height: 100)
-                    if (!isLoading && token.isGenerated) {
-                        SearchLoginView(loginSelected: $loginSelected, isLoading: $isLoading, token: token.value!.access_token)
+                    if (token.isGenerated) {
+                        SearchLoginView(loginSelected: $loginSelected, token: token.value!.access_token)
                     }
                     else {
                         LoadingView()
