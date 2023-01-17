@@ -29,12 +29,9 @@ class ParisCampusUsersAPIModel: ObservableObject {
             forHTTPHeaderField: "Authorization"
         )
         
-        let (data, response) = try await URLSession.shared.data(for: request)
-        print(response)
-        print(data)
+        let (data, _) = try await URLSession.shared.data(for: request)
         let decoder = JSONDecoder()
         let currentCampusUsers = try decoder.decode([CampusUsers].self, from: data)
-        print(currentCampusUsers)
         
         return currentCampusUsers
     }

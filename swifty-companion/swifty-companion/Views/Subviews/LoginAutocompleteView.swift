@@ -12,6 +12,7 @@ struct LoginAutocompleteView: View {
     @StateObject var users = ParisCampusUsersAPIModel()
     @Binding var loginSelected: String
     @Environment(\.dismiss) private var dismiss
+    
     var token: String
     
     var body: some View {
@@ -47,6 +48,7 @@ struct LoginAutocompleteView: View {
             }
         }
         .searchable(text: $loginSelected, placement: .navigationBarDrawer(displayMode: .always))
+        .disableAutocorrection(true)
         .onSubmit(of: .search) {
             Task {
                 if (loginSelected.count >= 3) {
@@ -57,7 +59,7 @@ struct LoginAutocompleteView: View {
     }
     
     var searchResults: [CampusUsers] {
-        if (users.isLoaded) {
+        if (users.isLoaded && !loginSelected.isEmpty) {
             return users.value!
         }
         else {
