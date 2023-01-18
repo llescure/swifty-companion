@@ -14,7 +14,7 @@ struct UserResultView: View {
     var body: some View {
         ZStack(alignment:.center) {
             GeometryReader {geo in
-                Image(type.background)
+                Image(coalitionType.background)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: geo.size.width)
@@ -34,7 +34,16 @@ struct UserResultView: View {
                         ProgressView()
                     }
                 )
-                Text(login)
+                HStack {
+                    Image(coalitionType.logo)
+                        .resizable()
+                        .frame(maxWidth: 30, maxHeight: 30)
+                    VStack {
+                        Text(login)
+                        Text(location)
+                        LevelBarView(color: coalitionType.color, level: level[0], levelCompletion: level[1])
+                    }
+                }
             }
         }
         .onDisappear {
@@ -50,7 +59,31 @@ struct UserResultView: View {
         return login
     }
     
-    var type: CoalitionType {
+    var location: String {
+        guard let location = user.data?.location else {
+            return "Unknown"
+        }
+        return location
+    }
+    
+    var level: [Double] {
+        var currentLevelCompletion: Double = 0
+        var currentLevel: Double = 0
+        
+        guard let cursus: [Cursus42] = user.data?.cursus_users else {
+            print("error")
+            return ([currentLevel, currentLevelCompletion])
+        }
+        for i in 0...cursus.count - 1 {
+            if (cursus[i].grade != nil) {
+                currentLevelCompletion = cursus[i].level.truncatingRemainder(dividingBy: 1)
+                currentLevel = cursus[i].level - currentLevelCompletion
+            }
+        }
+        return ([currentLevel, currentLevelCompletion * 100])
+    }
+    
+    var coalitionType: CoalitionType {
         switch user.coalition?.name {
         case "The Assembly":
             return CoalitionType.ParisCoalition[3]
