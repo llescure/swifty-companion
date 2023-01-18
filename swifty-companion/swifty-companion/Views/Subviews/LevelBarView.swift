@@ -46,8 +46,8 @@ struct LevelBarView: View {
                     .frame(minWidth: maxWidth)
                     .fixedSize()
                 }
+                .frame(width: 250)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(20)
         }
     }
     
