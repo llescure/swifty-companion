@@ -21,7 +21,19 @@ struct UserResultView: View {
                     .foregroundColor(.accentColor)
             }
             .edgesIgnoringSafeArea(.all)
-            VStack {
+            HStack {
+                AsyncImage(
+                    url: URL(string: user.data!.image.link!),
+                    content: { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 100, maxHeight: 100)
+                            .clipShape(Circle())
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
                 Text(login)
             }
         }

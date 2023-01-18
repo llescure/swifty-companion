@@ -11,6 +11,7 @@ class UserAPIModel: ObservableObject {
     @Published var data: User?
     @Published var coalition: Coalition?
     @Published var isDataLoaded: Bool = false
+    @Published var isNotExisting: Bool = false
     
     /* This function gets the main info on the user */
     
@@ -70,6 +71,7 @@ class UserAPIModel: ObservableObject {
             coalition = try await getUserCoalitionInfo(token: token, login: login)
             isDataLoaded = true
         } catch {
+            isNotExisting = true
             print("Error: Couldn't get the info on this user")
         }
     }

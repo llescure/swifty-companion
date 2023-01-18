@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchLoginView: View {
     @Binding var loginSelected: String
     @StateObject private var user: UserAPIModel = UserAPIModel()
+    @State var showingAlert: Bool = false
     var token: String
     
     var body: some View {
@@ -32,9 +33,16 @@ struct SearchLoginView: View {
                 .padding(.horizontal, 40)
             }
             .frame(height: 120)
+            .alert("The user you are looking for doesn't exit", isPresented: $user.isNotExisting) {
+                Button("OK", role:.cancel) {
+                    loginSelected = ""
+                }
+            }
         }
         .navigationDestination(isPresented: $user.isDataLoaded) {
-            UserResultView(loginSelected: $loginSelected, user: user)
+            if (user.data != nil) {
+                UserResultView(loginSelected: $loginSelected, user: user)
+            }
         }
     }
 }
