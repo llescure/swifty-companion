@@ -11,8 +11,28 @@ struct AchievementsUserView: View {
     var achievements: [Achievement42]
     
     var body: some View {
-        Text("Achievements")
-    }
+        ZStack(alignment: .top) {
+            Rectangle()
+                .fill(Color.white)
+                .frame(height: 400)
+            VStack(spacing: 40) {
+                Text("Achievements")
+                    .font(.title)
+                    .bold()
+                VStack {
+                    List {
+                        ForEach(achievements) { achievement in
+                            SingleAchievementView(achievement: achievement)
+                                .listRowSeparator(.hidden)
+                                .listRowBackground(Color.white)
+                        }
+                    }
+                    .listStyle(.plain)
+                }
+            }
+            .frame(height: 400)
+        }
+        .padding(.horizontal, 20)    }
 }
 
 struct AchievementsUserView_Previews: PreviewProvider {

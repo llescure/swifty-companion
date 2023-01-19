@@ -73,11 +73,17 @@ struct UserResultView: View {
     }
     
     var achievements: [Achievement42] {
+        var achievementWithoutDuplicate: [Achievement42] = []
         guard let achievements: [Achievement42] = user.data?.achievements else {
             print("Error: User data was not loaded")
             return []
         }
-        return achievements
+        for i in 0...achievements.count - 1 {
+            if (!achievementWithoutDuplicate.contains(where: {$0.name == achievements[i].name})) {
+                achievementWithoutDuplicate.append(achievements[i])
+            }
+        }
+        return achievementWithoutDuplicate
     }
     
     var skills: [Skill42] {

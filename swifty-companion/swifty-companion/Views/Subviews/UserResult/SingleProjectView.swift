@@ -64,6 +64,7 @@ struct SingleProjectView: View {
                 .foregroundColor(isProjectValidated ? Color("GreenOkProject") : Color("RedFail"))
                 .bold()
         }
+        .font(.caption)
     }
     
     var mark: String {

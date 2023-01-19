@@ -14,7 +14,7 @@ struct ProjectsUserView: View {
         ZStack(alignment: .top) {
             Rectangle()
                 .fill(Color.white)
-                .frame(height: 300)
+                .frame(height: 400)
             VStack(spacing: 40) {
                 Text("Projects")
                     .font(.title)
@@ -30,6 +30,7 @@ struct ProjectsUserView: View {
                     .listStyle(.plain)
                 }
             }
+            .frame(height: 400)
         }
         .padding(.horizontal, 20)
     }
