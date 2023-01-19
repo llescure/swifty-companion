@@ -22,17 +22,16 @@ struct Cursus42: Codable {
     var skills: [Skill42]
 }
 
-struct Skill42: Codable {
+struct Skill42: Codable, Identifiable {
     var id: Int
     var name: String
     var level: Double
 }
 
-struct Project42: Codable {
+struct Project42: Codable, Identifiable {
     var id: Int
     var final_mark: Int?
     var status: String
-    var validated: Bool?
     var project: ProjectName
     var cursus_ids: [Int]
     var marked_at: String?
@@ -42,7 +41,7 @@ struct ProjectName: Codable {
     var name: String
 }
 
-struct Achievement42: Codable {
+struct Achievement42: Codable, Identifiable {
     var id: Int
     var name: String
     var image: String

@@ -44,6 +44,7 @@ struct HeaderUserResultView: View {
                 LevelBarView(color: coalitionType.color, level: level[0], levelCompletion: level[1])
             }
         }
+        .padding(.horizontal, 10)
     }
     
     var login: String {
