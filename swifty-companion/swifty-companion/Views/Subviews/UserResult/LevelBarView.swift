@@ -19,36 +19,31 @@ struct LevelBarView: View {
     }
     
     var body: some View {
-            VStack {
-                ZStack(alignment: .leading) {
-                    GeometryReader { geo in
-                        RoundedRectangle(cornerRadius: 5)
-                            .foregroundColor(.clear)
-                            .onAppear {
-                                containerWidth = geo.size.width
-                            }
+        ZStack(alignment: .leading) {
+            GeometryReader { geo in
+                RoundedRectangle(cornerRadius: 5)
+                    .foregroundColor(.clear)
+                    .onAppear {
+                        containerWidth = geo.size.width
                     }
-                    RoundedRectangle(cornerRadius: 5)
-                        .fill(Color("MainBlack"))
-
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 5)
-                            .fill(Color(color))
-                            .frame(width: maxWidth)
-
-                        Text("level \(levelTxt) - \(levelCompletionTxt)%")
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 6, leading: 12, bottom: 6, trailing: 12))
-                            .background(
-                                RoundedRectangle(cornerRadius: 5)
-                                    .foregroundColor(.clear)                        )
-                    }
-                    .frame(minWidth: maxWidth)
-                    .fixedSize()
-                }
-                .frame(width: 250)
-                .fixedSize(horizontal: false, vertical: true)
+            }
+            RoundedRectangle(cornerRadius: 5)
+                .fill(Color("MainBlack"))
+            
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(Color(color))
+                    .frame(width: maxWidth)
+                
+                Text("level \(levelTxt) - \(levelCompletionTxt)%")
+                    .foregroundColor(.white)
+                    .padding(EdgeInsets(top: 6, leading: containerWidth/3, bottom: 6, trailing: 12))
+            }
+            .frame(minWidth: maxWidth)
+            .fixedSize()
         }
+        .frame(width: 250)
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     var levelTxt: String  {
