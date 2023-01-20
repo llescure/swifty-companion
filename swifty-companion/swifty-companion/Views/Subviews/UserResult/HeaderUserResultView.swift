@@ -41,7 +41,7 @@ struct HeaderUserResultView: View {
                             .bold()
                     }
                 }
-                LevelBarView(color: coalitionType.color, level: level[0], levelCompletion: level[1])
+                LevelBarView(color: coalitionType.color, level: level[0], levelCompletion: level[1], isRounded: true)
             }
         }
         .padding(.horizontal, 10)

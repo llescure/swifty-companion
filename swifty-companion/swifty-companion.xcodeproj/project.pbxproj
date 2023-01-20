@@ -22,6 +22,7 @@
 		DB393FF229794DB300E0B36C /* SkillsUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FF129794DB300E0B36C /* SkillsUserView.swift */; };
 		DB393FF6297958B700E0B36C /* SingleProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FF5297958B700E0B36C /* SingleProjectView.swift */; };
 		DB393FF82979EE7200E0B36C /* SingleAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FF72979EE7200E0B36C /* SingleAchievementView.swift */; };
+		DB393FFA297AD38F00E0B36C /* SingleSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FF9297AD38F00E0B36C /* SingleSkillView.swift */; };
 		DBB60A3C29718BC70093BAA9 /* 42API-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */; };
 		DBB60A4229719B430093BAA9 /* TokenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4129719B430093BAA9 /* TokenAPI.swift */; };
 		DBB60A4429719EA20093BAA9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB60A4329719EA20093BAA9 /* Token.swift */; };
@@ -52,6 +53,7 @@
 		DB393FF129794DB300E0B36C /* SkillsUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsUserView.swift; sourceTree = "<group>"; };
 		DB393FF5297958B700E0B36C /* SingleProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectView.swift; sourceTree = "<group>"; };
 		DB393FF72979EE7200E0B36C /* SingleAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAchievementView.swift; sourceTree = "<group>"; };
+		DB393FF9297AD38F00E0B36C /* SingleSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSkillView.swift; sourceTree = "<group>"; };
 		DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "42API-Info.plist"; sourceTree = "<group>"; };
 		DBB60A4129719B430093BAA9 /* TokenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAPI.swift; sourceTree = "<group>"; };
 		DBB60A4329719EA20093BAA9 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		DB393FF429794E1000E0B36C /* UserResult */ = {
 			isa = PBXGroup;
 			children = (
+				DB393FE9297874EA00E0B36C /* HeaderUserResultView.swift */,
 				DB393FE52978429F00E0B36C /* LevelBarView.swift */,
 				DB393FEB29793F2200E0B36C /* ButtonsToSelectUserView.swift */,
 				DB393FED29794D9E00E0B36C /* ProjectsUserView.swift */,
@@ -100,6 +103,7 @@
 				DB393FF129794DB300E0B36C /* SkillsUserView.swift */,
 				DB393FF5297958B700E0B36C /* SingleProjectView.swift */,
 				DB393FF72979EE7200E0B36C /* SingleAchievementView.swift */,
+				DB393FF9297AD38F00E0B36C /* SingleSkillView.swift */,
 			);
 			path = UserResult;
 			sourceTree = "<group>";
@@ -107,7 +111,6 @@
 		DBB65049296D60530078375B = {
 			isa = PBXGroup;
 			children = (
-				DB393FE9297874EA00E0B36C /* HeaderUserResultView.swift */,
 				DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */,
 				DBB65054296D60530078375B /* swifty-companion */,
 				DBB65053296D60530078375B /* Products */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB393FFA297AD38F00E0B36C /* SingleSkillView.swift in Sources */,
 				DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */,
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
 				DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */,

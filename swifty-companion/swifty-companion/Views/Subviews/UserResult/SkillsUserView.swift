@@ -11,8 +11,29 @@ struct SkillsUserView: View {
     var skills: [Skill42]
     
     var body: some View {
-        Text("Skills")
-    }
+        ZStack(alignment: .top) {
+            Rectangle()
+                .fill(Color.white)
+                .frame(height: 400)
+            VStack(spacing: 40) {
+                Text("Skills")
+                    .font(.title)
+                    .bold()
+                VStack {
+                    List {
+                        ForEach(skills) { skill in
+                            SingleSkillView(skill: skill)
+                                .listRowSeparator(.hidden)
+                                .listRowBackground(Color.white)
+                                .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
+                        }
+                    }
+                    .listStyle(.plain)
+                }
+            }
+            .frame(height: 400)
+        }
+        .padding(.horizontal, 20)    }
 }
 
 struct SkillsUserView_Previews: PreviewProvider {

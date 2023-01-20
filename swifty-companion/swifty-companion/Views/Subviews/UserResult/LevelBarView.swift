@@ -13,6 +13,7 @@ struct LevelBarView: View {
     var color: String
     var level: Double
     var levelCompletion: Double
+    var isRounded: Bool
     
     var maxWidth: Double {
         return min(containerWidth / 100 * levelCompletion, containerWidth)
@@ -37,17 +38,19 @@ struct LevelBarView: View {
                 
                 Text("level \(levelTxt) - \(levelCompletionTxt)%")
                     .foregroundColor(.white)
-                    .padding(EdgeInsets(top: 6, leading: containerWidth/3, bottom: 6, trailing: 12))
+                    .padding(EdgeInsets(top: 6, leading: isRounded ? containerWidth/4 : 8, bottom: 6, trailing: 12))
             }
             .frame(minWidth: maxWidth)
             .fixedSize()
         }
-        .frame(width: 250)
+        .frame(width: isRounded ? 250 : 150)
         .fixedSize(horizontal: false, vertical: true)
     }
     
     var levelTxt: String  {
-        return String(format: "%.0f", level)
+        if (isRounded) {
+            return String(format: "%.0f", level) }
+        return String(format:"%.2f" , level)
     }
     
     var levelCompletionTxt: String  {
@@ -57,6 +60,6 @@ struct LevelBarView: View {
 
 struct LevelBarView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelBarView(color: "AssemblyPurple", level: 10, levelCompletion: 20)
+        LevelBarView(color: "AssemblyPurple", level: 10, levelCompletion: 20, isRounded: false)
     }
 }
