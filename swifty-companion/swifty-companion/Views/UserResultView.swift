@@ -65,7 +65,7 @@ struct UserResultView: View {
             return projects
         }
         for i in 0...allProjects.count - 1 {
-            if (allProjects[i].cursus_ids[0] == 21 && allProjects[i].status == "finished") {
+            if (!allProjects[i].cursus_ids.isEmpty && allProjects[i].cursus_ids[0] == 21 && allProjects[i].status == "finished") {
                 projects.append(allProjects[i])
             }
         }
@@ -79,7 +79,7 @@ struct UserResultView: View {
             return []
         }
         for i in 0...achievements.count - 1 {
-            if (!achievementWithoutDuplicate.contains(where: {$0.name == achievements[i].name})) {
+            if (!achievementWithoutDuplicate.contains(where: {$0.name == achievements[i].name}) && achievements[i].visible) {
                 achievementWithoutDuplicate.append(achievements[i])
             }
         }

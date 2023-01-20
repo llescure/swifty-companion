@@ -25,6 +25,7 @@ struct AchievementsUserView: View {
                             SingleAchievementView(achievement: achievement)
                                 .listRowSeparator(.hidden)
                                 .listRowBackground(Color.white)
+                                .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
                         }
                     }
                     .listStyle(.plain)
@@ -37,6 +38,6 @@ struct AchievementsUserView: View {
 
 struct AchievementsUserView_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementsUserView(achievements: [Achievement42(id: 41, name: "All work and no play makes Jack a dull boy", image: "/uploads/achievement/image/41/SCO001.svg"), Achievement42(id: 169, name: "Bill Gates", image: "/uploads/achievement/image/169/BADGE_SCOLARITY_billgates.svg")])
+        AchievementsUserView(achievements: [Achievement42(id: 41, name: "All work and no play makes Jack a dull boy", visible: true), Achievement42(id: 169, name: "Bill Gates", visible: true)])
     }
 }

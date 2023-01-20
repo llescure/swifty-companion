@@ -44,5 +44,5 @@ struct ProjectName: Codable {
 struct Achievement42: Codable, Identifiable {
     var id: Int
     var name: String
-    var image: String
+    var visible: Bool
 }
