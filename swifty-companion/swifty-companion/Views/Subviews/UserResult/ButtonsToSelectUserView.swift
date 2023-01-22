@@ -16,45 +16,24 @@ struct ButtonsToSelectUserView: View {
     struct MyActionButtonStyle: ButtonStyle {
         func makeBody(configuration: Configuration) -> some View {
             configuration.label
-                .font(.subheadline.bold())
-                .frame(height: 44)
-                .frame(maxWidth: .infinity)
-                .cornerRadius(8)
         }
     }
     
     var body: some View {
         HStack(spacing: 10) {
-            Button(action:{}) {
-                Text("Projects")
-            }
-            .buttonStyle(MyActionButtonStyle())
-            .background(projectsButtonSelected ? Color(color) : Color("TransparentBlack").opacity(0.2))
-            .foregroundColor(projectsButtonSelected ? .white : Color(color))
-            .onTapGesture {
+            SingleButtonStyleView(text: "Projects", color: color, buttonSelected: projectsButtonSelected)
+                    .onTapGesture {
                 projectsButtonSelected = true
                 achievementsButtonSelected = false
                 skillsButtonSelected = false
             }
-            
-            Button(action:{}) {
-                Text("Achievements")
-            }
-            .buttonStyle(MyActionButtonStyle())
-            .background(achievementsButtonSelected ? Color(color) : Color("TransparentBlack").opacity(0.2))
-            .foregroundColor(achievementsButtonSelected ? .white : Color(color))
+            SingleButtonStyleView(text: "Achievements", color: color, buttonSelected: achievementsButtonSelected)
             .onTapGesture {
                 projectsButtonSelected = false
                 achievementsButtonSelected = true
                 skillsButtonSelected = false
             }
-
-            Button(action:{}) {
-                Text("Skills")
-            }
-            .buttonStyle(MyActionButtonStyle())
-            .background(skillsButtonSelected ? Color(color) : Color("TransparentBlack").opacity(0.2))
-            .foregroundColor(skillsButtonSelected ? .white : Color(color))
+            SingleButtonStyleView(text: "Skills", color: color, buttonSelected: skillsButtonSelected)
             .onTapGesture {
                 projectsButtonSelected = false
                 achievementsButtonSelected = false

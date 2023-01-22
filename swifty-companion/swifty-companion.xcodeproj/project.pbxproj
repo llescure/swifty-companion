@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB025BF7297DB8D5005CBD87 /* SingleButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */; };
 		DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */; };
 		DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */; };
 		DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonStyleView.swift; sourceTree = "<group>"; };
 		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
 		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAutocompleteView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		DBB65049296D60530078375B = {
 			isa = PBXGroup;
 			children = (
+				DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */,
 				DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */,
 				DBB65054296D60530078375B /* swifty-companion */,
 				DBB65053296D60530078375B /* Products */,
@@ -284,6 +287,7 @@
 				DB393FF82979EE7200E0B36C /* SingleAchievementView.swift in Sources */,
 				DB393FDC2976E3EE00E0B36C /* UserAPI.swift in Sources */,
 				DBB60A4229719B430093BAA9 /* TokenAPI.swift in Sources */,
+				DB025BF7297DB8D5005CBD87 /* SingleButtonStyleView.swift in Sources */,
 				DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */,
 				DB393FEE29794D9E00E0B36C /* ProjectsUserView.swift in Sources */,
 				DB393FE42976F46D00E0B36C /* UserResultView.swift in Sources */,
