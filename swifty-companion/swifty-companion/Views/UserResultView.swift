@@ -9,9 +9,12 @@ import SwiftUI
 
 struct UserResultView: View {
     @Binding var loginSelected: String
+    @Binding var isShowingLoadingView: Bool
+    
     @State var projectsButtonSelected: Bool = true
     @State var achievementsButtonSelected: Bool = false
     @State var skillsButtonSelected: Bool = false
+    
     var user: UserAPIModel
     
     var body: some View {
@@ -40,6 +43,7 @@ struct UserResultView: View {
         }
         .onDisappear {
             loginSelected = ""
+            isShowingLoadingView = false
         }
     }
     

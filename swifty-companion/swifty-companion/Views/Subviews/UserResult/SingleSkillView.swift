@@ -25,6 +25,6 @@ struct SingleSkillView: View {
 
 struct SingleSkillView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleSkillView(skill: Skill42(id: 3, name: "Rigor", level: 7.78))
+        SingleSkillView(skill: Skill42(id: 3, name: "Rigor", level: 3.00))
     }
 }

@@ -11,16 +11,18 @@ struct SearchLoginView: View {
     @Binding var loginSelected: String
     @StateObject private var user: UserAPIModel = UserAPIModel()
     @State var showingAlert: Bool = false
+    @State var isShowingLoadingView: Bool = false
     var token: String
     
     var body: some View {
         NavigationStack {
-            if (!user.isDataLoaded) {
+            if (!isShowingLoadingView) {
                 VStack(spacing: 10) {
                     LoginEntryView(loginSelected: $loginSelected, token: token)
                     Button (action: {
                         if (!loginSelected.isEmpty) {
                             Task {
+                                isShowingLoadingView = true
                                 await user.fetchData(token:token, login:loginSelected)
                             }
                         }
@@ -37,6 +39,7 @@ struct SearchLoginView: View {
                 .alert("The user you are looking for doesn't exit", isPresented: $user.isNotExisting) {
                     Button("OK", role:.cancel) {
                         loginSelected = ""
+                        isShowingLoadingView = false
                     }
                 }
             }
@@ -46,7 +49,7 @@ struct SearchLoginView: View {
         }
         .navigationDestination(isPresented: $user.isDataLoaded) {
             if (user.data != nil) {
-                UserResultView(loginSelected: $loginSelected, user: user)
+                UserResultView(loginSelected: $loginSelected, isShowingLoadingView: $isShowingLoadingView, user: user)
             }
         }
     }
