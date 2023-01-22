@@ -54,15 +54,17 @@ struct SingleProjectView: View {
     
     var body: some View {
         HStack(spacing: 50) {
-            HStack(spacing: 0) {
+            Group {
                 Text(project.project.name)
                     .foregroundColor(isProjectValidated ? Color("GreenOkProject") : Color("RedFail"))
-                    .bold()
+                    .bold() +
                 Text(" - " + durationSinceTheProjectWasDone)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             Text(mark)
                 .foregroundColor(isProjectValidated ? Color("GreenOkProject") : Color("RedFail"))
                 .bold()
+                .frame(maxWidth: 40, alignment: .trailing)
         }
         .font(.caption)
     }

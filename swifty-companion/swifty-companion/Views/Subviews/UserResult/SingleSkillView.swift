@@ -15,8 +15,10 @@ struct SingleSkillView: View {
             Text(skill.name)
                 .bold()
                 .font(.caption)
+                .frame(maxWidth: .infinity, alignment: .leading)
             LevelBarView(color: "AssemblyPurple", level: skill.level, levelCompletion: skill.level/20 * 100, isRounded: false)
                 .font(.caption)
+                .frame(maxWidth: .infinity, alignment: .trailing)
         }
     }
 }

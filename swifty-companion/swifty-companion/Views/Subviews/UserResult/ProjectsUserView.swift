@@ -25,7 +25,7 @@ struct ProjectsUserView: View {
                             SingleProjectView(project: project)
                                 .listRowSeparator(.hidden)
                                 .listRowBackground(Color.white)
-                                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 0))
+                                .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                         }
                     }
                     .listStyle(.plain)
