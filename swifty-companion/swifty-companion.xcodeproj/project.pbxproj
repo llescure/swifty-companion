@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DB025BF7297DB8D5005CBD87 /* SingleButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */; };
+		DB025BFD297E7BF2005CBD87 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB025BFC297E7BF2005CBD87 /* AppFont.swift */; };
+		DB025C02297E868A005CBD87 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C01297E8671005CBD87 /* Montserrat-ExtraBold.ttf */; };
+		DB025C03297E868A005CBD87 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C00297E8667005CBD87 /* Montserrat-Bold.ttf */; };
+		DB025C04297E868A005CBD87 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025BFF297E8654005CBD87 /* Montserrat-Black.ttf */; };
+		DB025C0B297E89A4005CBD87 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C0A297E897A005CBD87 /* Montserrat-Thin.ttf */; };
+		DB025C0C297E89A4005CBD87 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C09297E8973005CBD87 /* Montserrat-Regular.ttf */; };
+		DB025C0D297E89A4005CBD87 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C08297E8959005CBD87 /* Montserrat-SemiBold.ttf */; };
+		DB025C0E297E89A4005CBD87 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C07297E8947005CBD87 /* Montserrat-Light.ttf */; };
+		DB025C0F297E89A4005CBD87 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C06297E8938005CBD87 /* Montserrat-Medium.ttf */; };
+		DB025C10297E89A4005CBD87 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C05297E8925005CBD87 /* Montserrat-ExtraLight.ttf */; };
 		DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */; };
 		DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */; };
 		DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */; };
@@ -40,6 +50,16 @@
 
 /* Begin PBXFileReference section */
 		DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonStyleView.swift; sourceTree = "<group>"; };
+		DB025BFC297E7BF2005CBD87 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		DB025BFF297E8654005CBD87 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		DB025C00297E8667005CBD87 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		DB025C01297E8671005CBD87 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		DB025C05297E8925005CBD87 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		DB025C06297E8938005CBD87 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		DB025C07297E8947005CBD87 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		DB025C08297E8959005CBD87 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		DB025C09297E8973005CBD87 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		DB025C0A297E897A005CBD87 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
 		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAutocompleteView.swift; sourceTree = "<group>"; };
@@ -83,6 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB025BFE297E8646005CBD87 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DB025C0A297E897A005CBD87 /* Montserrat-Thin.ttf */,
+				DB025C09297E8973005CBD87 /* Montserrat-Regular.ttf */,
+				DB025C08297E8959005CBD87 /* Montserrat-SemiBold.ttf */,
+				DB025C07297E8947005CBD87 /* Montserrat-Light.ttf */,
+				DB025C06297E8938005CBD87 /* Montserrat-Medium.ttf */,
+				DB025C05297E8925005CBD87 /* Montserrat-ExtraLight.ttf */,
+				DB025C01297E8671005CBD87 /* Montserrat-ExtraBold.ttf */,
+				DB025C00297E8667005CBD87 /* Montserrat-Bold.ttf */,
+				DB025BFF297E8654005CBD87 /* Montserrat-Black.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		DB393FF329794DC900E0B36C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +133,7 @@
 		DB393FF429794E1000E0B36C /* UserResult */ = {
 			isa = PBXGroup;
 			children = (
+				DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */,
 				DB393FE9297874EA00E0B36C /* HeaderUserResultView.swift */,
 				DB393FE52978429F00E0B36C /* LevelBarView.swift */,
 				DB393FEB29793F2200E0B36C /* ButtonsToSelectUserView.swift */,
@@ -113,7 +150,6 @@
 		DBB65049296D60530078375B = {
 			isa = PBXGroup;
 			children = (
-				DB025BF6297DB8D5005CBD87 /* SingleButtonStyleView.swift */,
 				DBB60A3B29718BC70093BAA9 /* 42API-Info.plist */,
 				DBB65054296D60530078375B /* swifty-companion */,
 				DBB65053296D60530078375B /* Products */,
@@ -174,8 +210,10 @@
 		DBB65065296D621C0078375B /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				DB025BFE297E8646005CBD87 /* Font */,
 				DBE8AE1A296D9DBF00DAFBE1 /* ButtonIcon.swift */,
 				DBCD699C296DA6EA0046D5F9 /* StyledTextField.swift */,
+				DB025BFC297E7BF2005CBD87 /* AppFont.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -258,6 +296,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB025C0B297E89A4005CBD87 /* Montserrat-Thin.ttf in Resources */,
+				DB025C0C297E89A4005CBD87 /* Montserrat-Regular.ttf in Resources */,
+				DB025C0D297E89A4005CBD87 /* Montserrat-SemiBold.ttf in Resources */,
+				DB025C0E297E89A4005CBD87 /* Montserrat-Light.ttf in Resources */,
+				DB025C0F297E89A4005CBD87 /* Montserrat-Medium.ttf in Resources */,
+				DB025C10297E89A4005CBD87 /* Montserrat-ExtraLight.ttf in Resources */,
+				DB025C02297E868A005CBD87 /* Montserrat-ExtraBold.ttf in Resources */,
+				DB025C03297E868A005CBD87 /* Montserrat-Bold.ttf in Resources */,
+				DB025C04297E868A005CBD87 /* Montserrat-Black.ttf in Resources */,
 				DBB60A3C29718BC70093BAA9 /* 42API-Info.plist in Resources */,
 				DBB6505D296D60550078375B /* Preview Assets.xcassets in Resources */,
 				DBB6505A296D60550078375B /* Assets.xcassets in Resources */,
@@ -291,6 +338,7 @@
 				DBCD699D296DA6EA0046D5F9 /* StyledTextField.swift in Sources */,
 				DB393FEE29794D9E00E0B36C /* ProjectsUserView.swift in Sources */,
 				DB393FE42976F46D00E0B36C /* UserResultView.swift in Sources */,
+				DB025BFD297E7BF2005CBD87 /* AppFont.swift in Sources */,
 				DB393FEA297874EA00E0B36C /* HeaderUserResultView.swift in Sources */,
 				DB393FF029794DA900E0B36C /* AchievementsUserView.swift in Sources */,
 				DB393FE62978429F00E0B36C /* LevelBarView.swift in Sources */,

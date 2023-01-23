@@ -13,5 +13,6 @@ extension View {
             .overlay(Rectangle().frame(height: 2).padding(.top, 35))
             .foregroundColor(Color("LightGray"))
             .disableAutocorrection(true)
+            .font(AppFont.body2)
     }
 }

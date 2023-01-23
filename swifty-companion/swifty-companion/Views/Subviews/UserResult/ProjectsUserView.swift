@@ -17,8 +17,8 @@ struct ProjectsUserView: View {
                 .frame(height: 400)
             VStack(spacing: 40) {
                 Text("Projects")
-                    .font(.title)
-                    .bold()
+                    .font(AppFont.subtitle)
+                    .padding(2)
                 VStack {
                     List {
                         ForEach(projects) { project in

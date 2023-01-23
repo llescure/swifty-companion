@@ -9,14 +9,15 @@ import SwiftUI
 
 struct SingleSkillView: View {
     var skill: Skill42
+    var color: String
 
     var body: some View {
         HStack(spacing: 40) {
             Text(skill.name)
                 .bold()
-                .font(.caption)
+                .font(AppFont.footnote2)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            LevelBarView(color: "AssemblyPurple", level: skill.level, levelCompletion: skill.level/20 * 100, isRounded: false)
+            LevelBarView(color: color, level: skill.level, levelCompletion: skill.level/20 * 100, isRounded: false)
                 .font(.caption)
                 .frame(maxWidth: .infinity, alignment: .trailing)
         }
@@ -25,6 +26,6 @@ struct SingleSkillView: View {
 
 struct SingleSkillView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleSkillView(skill: Skill42(id: 3, name: "Rigor", level: 3.00))
+        SingleSkillView(skill: Skill42(id: 3, name: "Rigor", level: 3.00), color: "AssemblyPurple")
     }
 }

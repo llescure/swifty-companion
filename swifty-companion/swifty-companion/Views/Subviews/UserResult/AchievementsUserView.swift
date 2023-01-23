@@ -17,8 +17,8 @@ struct AchievementsUserView: View {
                 .frame(height: 400)
             VStack(spacing: 40) {
                 Text("Achievements")
-                    .font(.title)
-                    .bold()
+                    .font(AppFont.subtitle)
+                    .padding(2)
                 VStack {
                     List {
                         ForEach(achievements) { achievement in

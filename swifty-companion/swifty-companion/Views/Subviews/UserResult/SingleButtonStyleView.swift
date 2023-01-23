@@ -19,7 +19,9 @@ struct SingleButtonStyleView: View {
             .background(buttonSelected ? Color(color) : Color("TransparentBlack").opacity(0.2))
             .foregroundColor(buttonSelected ? .white : Color(color))
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .font(.subheadline.bold())    }
+            .font(AppFont.footnote)
+        
+    }
 }
 
 struct SingleButtonStyleView_Previews: PreviewProvider {

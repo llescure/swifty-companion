@@ -57,16 +57,16 @@ struct SingleProjectView: View {
             Group {
                 Text(project.project.name)
                     .foregroundColor(isProjectValidated ? Color("GreenOkProject") : Color("RedFail"))
-                    .bold() +
+                    .font(AppFont.body2) +
                 Text(" - " + durationSinceTheProjectWasDone)
+                    .font(AppFont.body3)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             Text(mark)
                 .foregroundColor(isProjectValidated ? Color("GreenOkProject") : Color("RedFail"))
-                .bold()
                 .frame(maxWidth: 40, alignment: .trailing)
+                .font(AppFont.body2)
         }
-        .font(.caption)
     }
     
     var mark: String {

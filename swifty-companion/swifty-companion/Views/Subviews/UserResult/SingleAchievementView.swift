@@ -15,9 +15,8 @@ struct SingleAchievementView: View {
             Image(achievement.name)
                 .frame(maxWidth: 50, maxHeight: 50)
             Text(achievement.name)
-                .bold()
+                .font(AppFont.footnote2)
         }
-        .font(.caption)
         .padding(.bottom, 20)
     }
 }

@@ -39,6 +39,7 @@ struct LoginAutocompleteView: View {
                                 .frame(maxWidth: 50, maxHeight: 50)
                         }
                         Text(user.login)
+                            .font(AppFont.body)
                             .onTapGesture {
                                 loginSelected = user.login
                                 dismiss()

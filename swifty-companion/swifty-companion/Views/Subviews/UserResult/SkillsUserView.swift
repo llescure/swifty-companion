@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SkillsUserView: View {
     var skills: [Skill42]
+    var color: String
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -17,12 +18,12 @@ struct SkillsUserView: View {
                 .frame(height: 400)
             VStack(spacing: 40) {
                 Text("Skills")
-                    .font(.title)
-                    .bold()
+                    .font(AppFont.subtitle)
+                    .padding(2)
                 VStack {
                     List {
                         ForEach(skills) { skill in
-                            SingleSkillView(skill: skill)
+                            SingleSkillView(skill: skill, color: color)
                                 .listRowSeparator(.hidden)
                                 .listRowBackground(Color.white)
                                 .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
@@ -38,6 +39,6 @@ struct SkillsUserView: View {
 
 struct SkillsUserView_Previews: PreviewProvider {
     static var previews: some View {
-        SkillsUserView(skills: [Skill42(id: 3, name: "Rigor", level: 7.78), Skill42(id: 10, name: "Network & system administration", level: 7.6)])
+        SkillsUserView(skills: [Skill42(id: 3, name: "Rigor", level: 7.78), Skill42(id: 10, name: "Network & system administration", level: 7.6)], color: "AssemblyPurple")
     }
 }

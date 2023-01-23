@@ -15,7 +15,7 @@ struct LoginEntryView: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 0) {
             Text("Login")
-                .font(.custom("header", size: 10))
+                .font(AppFont.login)
                 .foregroundColor(Color("LightGray"))
             TextField("", text: $loginSelected)
                 .disabled(true)

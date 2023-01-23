@@ -32,7 +32,7 @@ extension CoalitionType {
         CoalitionType(id: 46, color: "AllianceGreen", background: "AllianceBackground", logo: "AllianceLogo"),
         CoalitionType(id: 47, color: "OrderOrange", background: "OrderBackground", logo: "OrderLogo"),
         CoalitionType(id: 48, color: "AssemblyPurple", background: "AssemblyBackground", logo: "AssemblyLogo"),
-        CoalitionType(id: 0, color: "MainBlue", background: "Background", logo: "AppIcon")
+        CoalitionType(id: 0, color: "MainBlue", background: "Background", logo: "Logo")
     ]
 }
 

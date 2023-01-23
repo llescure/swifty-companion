@@ -39,6 +39,7 @@ struct LevelBarView: View {
                 Text("level \(levelTxt) - \(levelCompletionTxt)%")
                     .foregroundColor(.white)
                     .padding(EdgeInsets(top: 6, leading: isRounded ? containerWidth/4 : 8, bottom: 6, trailing: 12))
+                    .font(AppFont.footnote2)
             }
             .frame(minWidth: maxWidth)
             .fixedSize()

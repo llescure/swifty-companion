@@ -43,8 +43,14 @@ struct SearchLoginView: View {
                     }
                 }
             }
-            else {
+            else if (isShowingLoadingView){
                 LoadingView()
+                    .alert("The user you are looking for doesn't exit", isPresented: $user.isNotExisting) {
+                        Button("OK", role:.cancel) {
+                            loginSelected = ""
+                            isShowingLoadingView = false
+                        }
+                    }
             }
         }
         .navigationDestination(isPresented: $user.isDataLoaded) {

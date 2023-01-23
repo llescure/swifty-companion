@@ -13,18 +13,25 @@ struct HeaderUserResultView: View {
 
     var body: some View {
         HStack {
-            AsyncImage(
-                url: URL(string: user.data!.image.link!),
-                content: { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: 100, maxHeight: 100)
-                        .clipShape(Circle())
-                },
-                placeholder: {
-                    ProgressView()
-                }
-            )
+            if (user.data!.image.link != nil) {
+                AsyncImage(
+                    url: URL(string: user.data!.image.link!),
+                    content: { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(maxWidth: 100, maxHeight: 100)
+                            .clipShape(Circle())
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
+            }
+            else {
+                Image("Incognito")
+                    .resizable()
+                    .frame(maxWidth: 100, maxHeight: 100)
+            }
             VStack(alignment: .leading) {
                 HStack(spacing: 40) {
                     Image(coalitionType.logo)
@@ -33,11 +40,11 @@ struct HeaderUserResultView: View {
                     VStack(alignment: .leading){
                         Text(login)
                             .foregroundColor(.white)
-                            .font(.title2)
+                            .font(AppFont.title2)
                             .bold()
                         Text(location)
                             .foregroundColor(.white)
-                            .font(.title2)
+                            .font(AppFont.title2)
                             .bold()
                     }
                 }
@@ -70,10 +77,12 @@ struct HeaderUserResultView: View {
             print("error")
             return ([currentLevel, currentLevelCompletion])
         }
-        for i in 0...cursus.count - 1 {
-            if (cursus[i].grade != nil) {
-                currentLevelCompletion = cursus[i].level.truncatingRemainder(dividingBy: 1)
-                currentLevel = cursus[i].level - currentLevelCompletion
+        if (cursus.count > 1) {
+            for i in 0...cursus.count - 1 {
+                if (cursus[i].grade != nil) {
+                    currentLevelCompletion = cursus[i].level.truncatingRemainder(dividingBy: 1)
+                    currentLevel = cursus[i].level - currentLevelCompletion
+                }
             }
         }
         return ([currentLevel, currentLevelCompletion * 100])

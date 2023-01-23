@@ -37,7 +37,7 @@ struct UserResultView: View {
                     AchievementsUserView(achievements: achievements)
                 }
                 else if (skillsButtonSelected) {
-                    SkillsUserView(skills: skills)
+                    SkillsUserView(skills: skills, color: coalitionType.color)
                 }
             }
         }
@@ -68,9 +68,11 @@ struct UserResultView: View {
             print("Error: User data was not loaded")
             return projects
         }
-        for i in 0...allProjects.count - 1 {
-            if (!allProjects[i].cursus_ids.isEmpty && allProjects[i].cursus_ids[0] == 21 && allProjects[i].status == "finished") {
-                projects.append(allProjects[i])
+        if (allProjects.count > 1) {
+            for i in 0...allProjects.count - 1 {
+                if (!allProjects[i].cursus_ids.isEmpty && allProjects[i].cursus_ids[0] == 21 && allProjects[i].status == "finished") {
+                    projects.append(allProjects[i])
+                }
             }
         }
         return projects
@@ -82,9 +84,11 @@ struct UserResultView: View {
             print("Error: User data was not loaded")
             return []
         }
-        for i in 0...achievements.count - 1 {
-            if (!achievementWithoutDuplicate.contains(where: {$0.name == achievements[i].name}) && achievements[i].visible) {
-                achievementWithoutDuplicate.append(achievements[i])
+        if (achievements.count > 1) {
+            for i in 0...achievements.count - 1 {
+                if (!achievementWithoutDuplicate.contains(where: {$0.name == achievements[i].name}) && achievements[i].visible) {
+                    achievementWithoutDuplicate.append(achievements[i])
+                }
             }
         }
         return achievementWithoutDuplicate
@@ -96,9 +100,11 @@ struct UserResultView: View {
             print("Error: User data was not loaded")
             return skills
         }
-        for i in 0...cursus.count - 1 {
-            if (cursus[i].grade != nil) {
-                skills = cursus[i].skills
+        if (cursus.count > 1) {
+            for i in 0...cursus.count - 1 {
+                if (cursus[i].grade != nil) {
+                    skills = cursus[i].skills
+                }
             }
         }
         return skills
