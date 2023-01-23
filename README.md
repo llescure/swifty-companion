@@ -28,5 +28,4 @@ You need to create a Property List file called 42API-Info and add two rows API_S
 
 Here is a short video of the app in action:
 
-https://user-images.githubusercontent.com/64603276/214019381-5ad39ea2-f3b2-47d5-adf8-001b050ebbe7.MP4
-
+https://user-images.githubusercontent.com/64603276/214035811-2ec637e6-16c3-4221-b5bf-4e7997fd2d3d.MP4
