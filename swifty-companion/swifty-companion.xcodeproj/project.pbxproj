@@ -60,6 +60,7 @@
 		DB025C08297E8959005CBD87 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		DB025C09297E8973005CBD87 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		DB025C0A297E897A005CBD87 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		DB025C11297E996B005CBD87 /* Preview.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Preview.MP4; sourceTree = "<group>"; };
 		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
 		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAutocompleteView.swift; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 		DBB6505B296D60550078375B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				DB025C11297E996B005CBD87 /* Preview.MP4 */,
 				DBB6505C296D60550078375B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
