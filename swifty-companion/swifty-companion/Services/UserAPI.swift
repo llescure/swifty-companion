@@ -56,7 +56,7 @@ class UserAPIModel: ObservableObject {
         let currentUserCoalition = try decoder.decode([Coalition].self, from: data)
         let currentUserCoalitionSize = currentUserCoalition.count - 1
         // The cursus coalition in Paris have an id comprised between 45 and 48
-        if (currentUserCoalitionSize > 0) {
+        if (!currentUserCoalition.isEmpty) {
             for i in 0...currentUserCoalitionSize {
                 if (currentUserCoalition[i].id >= 45 && currentUserCoalition[i].id <= 48) {
                     return currentUserCoalition[i]

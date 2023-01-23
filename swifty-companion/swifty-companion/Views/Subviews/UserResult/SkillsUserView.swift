@@ -13,26 +13,26 @@ struct SkillsUserView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            Rectangle()
-                .fill(Color.white)
+            RoundedRectangle(cornerRadius: 4)
+                .fill(Color("TransparentBlack"))
                 .frame(height: 400)
             VStack(spacing: 40) {
                 Text("Skills")
                     .font(AppFont.subtitle)
-                    .padding(2)
+                    .padding(.vertical, 10)
                 VStack {
                     List {
                         ForEach(skills) { skill in
                             SingleSkillView(skill: skill, color: color)
                                 .listRowSeparator(.hidden)
-                                .listRowBackground(Color.white)
+                                .listRowBackground(Color("TransparentBlack"))
                                 .listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                         }
                     }
                     .listStyle(.plain)
                 }
             }
-            .frame(height: 400)
+            .frame(height: 390)
         }
         .padding(.horizontal, 20)    }
 }

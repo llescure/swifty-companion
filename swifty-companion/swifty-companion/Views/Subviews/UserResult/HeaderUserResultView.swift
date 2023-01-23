@@ -37,6 +37,7 @@ struct HeaderUserResultView: View {
                     Image(coalitionType.logo)
                         .resizable()
                         .frame(maxWidth: 30, maxHeight: 30)
+                        .clipShape(RoundedRectangle(cornerRadius: 4))
                     VStack(alignment: .leading){
                         Text(login)
                             .foregroundColor(.white)
