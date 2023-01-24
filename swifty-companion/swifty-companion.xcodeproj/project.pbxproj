@@ -21,6 +21,7 @@
 		DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */; };
 		DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */; };
 		DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */; };
+		DB221DFB297FE53500646A5C /* RotationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB221DFA297FE53500646A5C /* RotationTracker.swift */; };
 		DB393FDC2976E3EE00E0B36C /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDB2976E3EE00E0B36C /* UserAPI.swift */; };
 		DB393FDE2976E3F500E0B36C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDD2976E3F500E0B36C /* User.swift */; };
 		DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDF2976F0C300E0B36C /* Coalition.swift */; };
@@ -63,6 +64,7 @@
 		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
 		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAutocompleteView.swift; sourceTree = "<group>"; };
+		DB221DFA297FE53500646A5C /* RotationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationTracker.swift; sourceTree = "<group>"; };
 		DB393FDB2976E3EE00E0B36C /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		DB393FDD2976E3F500E0B36C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB393FDF2976F0C300E0B36C /* Coalition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coalition.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				DB393FDB2976E3EE00E0B36C /* UserAPI.swift */,
 				DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */,
 				DBB60A4129719B430093BAA9 /* TokenAPI.swift */,
+				DB221DFA297FE53500646A5C /* RotationTracker.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */,
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
 				DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */,
+				DB221DFB297FE53500646A5C /* RotationTracker.swift in Sources */,
 				DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */,
 				DBB60A4429719EA20093BAA9 /* Token.swift in Sources */,
 				DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */,
