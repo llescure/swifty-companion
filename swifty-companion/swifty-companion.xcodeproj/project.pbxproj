@@ -18,10 +18,10 @@
 		DB025C0E297E89A4005CBD87 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C07297E8947005CBD87 /* Montserrat-Light.ttf */; };
 		DB025C0F297E89A4005CBD87 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C06297E8938005CBD87 /* Montserrat-Medium.ttf */; };
 		DB025C10297E89A4005CBD87 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB025C05297E8925005CBD87 /* Montserrat-ExtraLight.ttf */; };
-		DB025C13297E9C87005CBD87 /* 42API-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB025C12297E9C87005CBD87 /* 42API-Info.plist */; };
 		DB0EB6B12975B90C005ABFB3 /* CampusUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */; };
 		DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */; };
 		DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */; };
+		DB221DFB297FE53500646A5C /* RotationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB221DFA297FE53500646A5C /* RotationTracker.swift */; };
 		DB393FDC2976E3EE00E0B36C /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDB2976E3EE00E0B36C /* UserAPI.swift */; };
 		DB393FDE2976E3F500E0B36C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDD2976E3F500E0B36C /* User.swift */; };
 		DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB393FDF2976F0C300E0B36C /* Coalition.swift */; };
@@ -61,10 +61,10 @@
 		DB025C09297E8973005CBD87 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		DB025C0A297E897A005CBD87 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		DB025C11297E996B005CBD87 /* Preview.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Preview.MP4; sourceTree = "<group>"; };
-		DB025C12297E9C87005CBD87 /* 42API-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "42API-Info.plist"; sourceTree = "<group>"; };
 		DB0EB6B02975B90C005ABFB3 /* CampusUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusUsers.swift; sourceTree = "<group>"; };
 		DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisCampusUsersAPI.swift; sourceTree = "<group>"; };
 		DB0EB6B42975E700005ABFB3 /* LoginAutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAutocompleteView.swift; sourceTree = "<group>"; };
+		DB221DFA297FE53500646A5C /* RotationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationTracker.swift; sourceTree = "<group>"; };
 		DB393FDB2976E3EE00E0B36C /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		DB393FDD2976E3F500E0B36C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DB393FDF2976F0C300E0B36C /* Coalition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coalition.swift; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 		DBB65049296D60530078375B = {
 			isa = PBXGroup;
 			children = (
-				DB025C12297E9C87005CBD87 /* 42API-Info.plist */,
 				DBB65054296D60530078375B /* swifty-companion */,
 				DBB65053296D60530078375B /* Products */,
 			);
@@ -205,6 +204,7 @@
 				DB393FDB2976E3EE00E0B36C /* UserAPI.swift */,
 				DB0EB6B22975D0E3005ABFB3 /* ParisCampusUsersAPI.swift */,
 				DBB60A4129719B430093BAA9 /* TokenAPI.swift */,
+				DB221DFA297FE53500646A5C /* RotationTracker.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,7 +301,6 @@
 				DB025C0B297E89A4005CBD87 /* Montserrat-Thin.ttf in Resources */,
 				DB025C0C297E89A4005CBD87 /* Montserrat-Regular.ttf in Resources */,
 				DB025C0D297E89A4005CBD87 /* Montserrat-SemiBold.ttf in Resources */,
-				DB025C13297E9C87005CBD87 /* 42API-Info.plist in Resources */,
 				DB025C0E297E89A4005CBD87 /* Montserrat-Light.ttf in Resources */,
 				DB025C0F297E89A4005CBD87 /* Montserrat-Medium.ttf in Resources */,
 				DB025C10297E89A4005CBD87 /* Montserrat-ExtraLight.ttf in Resources */,
@@ -324,6 +323,7 @@
 				DB393FE02976F0C300E0B36C /* Coalition.swift in Sources */,
 				DBB65058296D60530078375B /* HomePageView.swift in Sources */,
 				DB0EB6B52975E700005ABFB3 /* LoginAutocompleteView.swift in Sources */,
+				DB221DFB297FE53500646A5C /* RotationTracker.swift in Sources */,
 				DB0EB6B32975D0E3005ABFB3 /* ParisCampusUsersAPI.swift in Sources */,
 				DBB60A4429719EA20093BAA9 /* Token.swift in Sources */,
 				DBE8AE1D296DA10B00DAFBE1 /* LoginEntryView.swift in Sources */,

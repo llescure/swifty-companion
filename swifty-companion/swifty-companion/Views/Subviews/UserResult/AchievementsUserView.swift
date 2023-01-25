@@ -9,16 +9,17 @@ import SwiftUI
 
 struct AchievementsUserView: View {
     var achievements: [Achievement42]
+    var size: CGFloat
     
     var body: some View {
         ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color("TransparentBlack"))
-                .frame(height: 400)
-            VStack(spacing: 40) {
+                .frame(height: size)
+            VStack(spacing: size == 400 ? 40 : 10) {
                 Text("Achievements")
                     .font(AppFont.subtitle)
-                    .padding(.vertical, 10)
+                    .padding(.vertical, size == 400 ? 10 : 4)
                 VStack {
                     List {
                         ForEach(achievements) { achievement in
@@ -31,13 +32,14 @@ struct AchievementsUserView: View {
                     .listStyle(.plain)
                 }
             }
-            .frame(height: 390)
+            .frame(height: size - 10)
         }
-        .padding(.horizontal, 20)    }
+        .padding(.horizontal, size == 400 ? 20 : 5)
+    }
 }
 
 struct AchievementsUserView_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementsUserView(achievements: [Achievement42(id: 41, name: "All work and no play makes Jack a dull boy", visible: true), Achievement42(id: 169, name: "Bill Gates", visible: true)])
+        AchievementsUserView(achievements: [Achievement42(id: 41, name: "All work and no play makes Jack a dull boy", visible: true), Achievement42(id: 169, name: "Bill Gates", visible: true)], size: 400)
     }
 }

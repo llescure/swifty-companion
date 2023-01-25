@@ -10,16 +10,17 @@ import SwiftUI
 struct SkillsUserView: View {
     var skills: [Skill42]
     var color: String
+    var size: CGFloat
     
     var body: some View {
         ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: 4)
                 .fill(Color("TransparentBlack"))
-                .frame(height: 400)
-            VStack(spacing: 40) {
+                .frame(height: size)
+            VStack(spacing: size == 400 ? 40 : 10) {
                 Text("Skills")
                     .font(AppFont.subtitle)
-                    .padding(.vertical, 10)
+                    .padding(.vertical, size == 400 ? 10 : 4)
                 VStack {
                     List {
                         ForEach(skills) { skill in
@@ -32,13 +33,14 @@ struct SkillsUserView: View {
                     .listStyle(.plain)
                 }
             }
-            .frame(height: 390)
+            .frame(height: size - 10)
         }
-        .padding(.horizontal, 20)    }
+        .padding(.horizontal, size == 400 ? 20 : 5)
+    }
 }
 
 struct SkillsUserView_Previews: PreviewProvider {
     static var previews: some View {
-        SkillsUserView(skills: [Skill42(id: 3, name: "Rigor", level: 7.78), Skill42(id: 10, name: "Network & system administration", level: 7.6)], color: "AssemblyPurple")
+        SkillsUserView(skills: [Skill42(id: 3, name: "Rigor", level: 7.78), Skill42(id: 10, name: "Network & system administration", level: 7.6)], color: "AssemblyPurple", size: 400)
     }
 }

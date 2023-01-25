@@ -14,6 +14,7 @@ struct UserResultView: View {
     @State var projectsButtonSelected: Bool = true
     @State var achievementsButtonSelected: Bool = false
     @State var skillsButtonSelected: Bool = false
+    @State private var orientation = UIDevice.current.orientation
     
     var user: UserAPIModel
     
@@ -27,23 +28,26 @@ struct UserResultView: View {
                     .foregroundColor(.accentColor)
             }
             .edgesIgnoringSafeArea(.all)
-            VStack(spacing: 60) {
+            VStack(spacing: orientation.isLandscape ? 30 : 60) {
                 HeaderUserResultView(user: user, coalitionType: coalitionType)
                 ButtonsToSelectUserView(color: coalitionType.color, projectsButtonSelected: $projectsButtonSelected, achievementsButtonSelected: $achievementsButtonSelected, skillsButtonSelected: $skillsButtonSelected)
                 if (projectsButtonSelected) {
-                    ProjectsUserView(projects: projects)
+                    ProjectsUserView(projects: projects, size: orientation.isLandscape ? 150 : 400)
                 }
                 else if (achievementsButtonSelected) {
-                    AchievementsUserView(achievements: achievements)
+                    AchievementsUserView(achievements: achievements, size: orientation.isLandscape ? 150 : 400)
                 }
                 else if (skillsButtonSelected) {
-                    SkillsUserView(skills: skills, color: coalitionType.color)
+                    SkillsUserView(skills: skills, color: coalitionType.color, size: orientation.isLandscape ? 150 : 400)
                 }
             }
         }
         .onDisappear {
             loginSelected = ""
             isShowingLoadingView = false
+        }
+        .onRotate {newOrientation in
+                orientation = newOrientation
         }
     }
     
