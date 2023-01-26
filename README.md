@@ -2,6 +2,12 @@
 
 The aim of this app was to code an app in SwiftUI by using the 42 API to get information on a user.
 
+----
+
+Here is a short video of the app in action:
+
+https://user-images.githubusercontent.com/64603276/214035811-2ec637e6-16c3-4221-b5bf-4e7997fd2d3d.MP4
+
 ---- 
 
 My application displays the following information on a given user :
@@ -22,10 +28,3 @@ I created some Figma view before coding that you can find [here](https://github.
 You need to create a Property List file called 42API-Info and add two rows API_SECRET and API_UID.
 
 ![42API-Info](https://user-images.githubusercontent.com/64603276/214023668-446decd3-ca83-4c40-ad33-d35d16470699.jpg)
-
-
-----
-
-Here is a short video of the app in action:
-
-https://user-images.githubusercontent.com/64603276/214035811-2ec637e6-16c3-4221-b5bf-4e7997fd2d3d.MP4
